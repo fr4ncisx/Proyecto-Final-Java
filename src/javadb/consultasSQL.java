@@ -548,35 +548,6 @@ public class consultasSQL implements iniciarInstanciaProfesor, iniciarInstanciaE
         }
     }
 
-    /*public void consultarNombreApellido() {
-        String consultaAula = "SELECT nombre,apellido FROM Estudiante WHERE usuario_estudiante=?";
-        try {
-            SQL.conectar();
-            conexion = SQL.getConexion();
-            consulta = conexion.prepareStatement(consultaAula);
-            consulta.setString(1, usuario);
-            System.out.println(usuario);
-            resultado = consulta.executeQuery();
-            if(resultado.next()) {
-                nombreAlumno = resultado.getString(1);
-                apellidoAlumno = resultado.getString(2);
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(consultasSQL.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            try {
-                if (resultado != null) {
-                    resultado.close();
-                }
-                if (consulta != null) {
-                    consulta.close();
-                }
-                conexion.close();
-            } catch (SQLException ex) {
-                Logger.getLogger(consultasSQL.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-    }*/
     public void consultarMaterias(int Anio) {
         try {
             boolean hayResultados = false;
